@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08A45199817230A1148B2B75 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D39B005E3F27A9CF4ACA07 /* JournalView.swift */; };
+		0A48B2F7C02E5194416B8EED /* WheelCountPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31F6DC55D2CF29627664B7 /* WheelCountPicker.swift */; };
 		0A73DCDA18F4DBDE47491D2B /* SoberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8648A1BF4A54BDA96FE775 /* SoberApp.swift */; };
 		12CB384510E3AC5E1375F01B /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD9AE9B8FB1C067FAB1093 /* Weight.swift */; };
 		2127CDB7A3BA15FB0B227B4A /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657DCA7F592F08208CD733D9 /* Stats.swift */; };
@@ -87,6 +88,7 @@
 		D3720241BB7617BFB26D4979 /* SleepHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepHealthView.swift; sourceTree = "<group>"; };
 		E5D0277C1F1057B474837F2C /* Sober.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sober.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E796DBC3654C5F723E1B5641 /* StreaksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksTests.swift; sourceTree = "<group>"; };
+		EF31F6DC55D2CF29627664B7 /* WheelCountPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelCountPicker.swift; sourceTree = "<group>"; };
 		FD3C5ED9258CA30B684354FE /* Insights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insights.swift; sourceTree = "<group>"; };
 		FE4857DE09FCC62D3E7F67B6 /* Streaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streaks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 				4CDA88649F7148CE9817BCDB /* StatTile.swift */,
 				429E7C87E5B384EBF7C7BBB0 /* Theme.swift */,
 				8C4211BCEB8EF6EA7F5C10D5 /* TriggerChips.swift */,
+				EF31F6DC55D2CF29627664B7 /* WheelCountPicker.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				8DDCA8520100AEEF23551687 /* TriggerChips.swift in Sources */,
 				12CB384510E3AC5E1375F01B /* Weight.swift in Sources */,
 				869571BAEF640C2C76B3EF6D /* WeightView.swift in Sources */,
+				0A48B2F7C02E5194416B8EED /* WheelCountPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

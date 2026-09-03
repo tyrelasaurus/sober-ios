@@ -77,12 +77,18 @@ struct OnboardingView: View {
                     .foregroundStyle(Theme.textSecondary)
 
                 Text("Free-access days").font(.subheadline.bold())
-                numberField("Days per week", value: $freeDaysPerWeek)
-                numberField("Drinks on those days", value: $freeDrinksPerDay)
+                HStack(spacing: 12) {
+                    WheelCountPicker(title: "Days/week", range: 0...7, selection: $freeDaysPerWeek)
+                    WheelCountPicker(title: "Drinks/day", range: 0...5, plusAtMax: true, selection: $freeDrinksPerDay)
+                }
+                .frame(height: 110)
 
                 Text("Days you'd pay").font(.subheadline.bold())
-                numberField("Days per week you might go out", value: $paidDaysPerWeek)
-                numberField("Drinks when you did", value: $paidDrinksPerDay)
+                HStack(spacing: 12) {
+                    WheelCountPicker(title: "Days/week", range: 0...7, selection: $paidDaysPerWeek)
+                    WheelCountPicker(title: "Drinks/day", range: 0...5, plusAtMax: true, selection: $paidDrinksPerDay)
+                }
+                .frame(height: 110)
                 numberField("% of those days you actually went", value: $paidOutFrequencyPct)
                 numberField("Avg spend on a night out", value: $avgSpendPerOuting)
 

@@ -34,10 +34,19 @@ struct SettingsView: View {
                     Section("Money saved calculation") {
                         TextField("Currency symbol", text: $currencySymbol)
                         DatePicker("Current streak start date", selection: $startDate, in: ...Date(), displayedComponents: .date)
-                        Stepper("Free days/week: \(Int(freeDaysPerWeek))", value: $freeDaysPerWeek, in: 0...7)
-                        Stepper("Free drinks/day: \(Int(freeDrinksPerDay))", value: $freeDrinksPerDay, in: 0...20)
-                        Stepper("Paid days/week: \(Int(paidDaysPerWeek))", value: $paidDaysPerWeek, in: 0...7)
-                        Stepper("Paid drinks/day: \(Int(paidDrinksPerDay))", value: $paidDrinksPerDay, in: 0...20)
+                        Text("Free-access days").font(.caption).foregroundStyle(Theme.textSecondary)
+                        HStack(spacing: 12) {
+                            WheelCountPicker(title: "Days/week", range: 0...7, selection: $freeDaysPerWeek)
+                            WheelCountPicker(title: "Drinks/day", range: 0...5, plusAtMax: true, selection: $freeDrinksPerDay)
+                        }
+                        .frame(height: 110)
+
+                        Text("Days you'd pay").font(.caption).foregroundStyle(Theme.textSecondary)
+                        HStack(spacing: 12) {
+                            WheelCountPicker(title: "Days/week", range: 0...7, selection: $paidDaysPerWeek)
+                            WheelCountPicker(title: "Drinks/day", range: 0...5, plusAtMax: true, selection: $paidDrinksPerDay)
+                        }
+                        .frame(height: 110)
                         Stepper("Go-out frequency: \(Int(paidOutFrequencyPct))%", value: $paidOutFrequencyPct, in: 0...100, step: 5)
                         Stepper("Avg spend/outing: \(Int(avgSpendPerOuting))", value: $avgSpendPerOuting, in: 0...500, step: 5)
                         Text("Estimated: \(currencySymbol)\(String(format: "%.2f", estimate.daily))/day (\(currencySymbol)\(String(format: "%.0f", estimate.weekly))/week) · \(Fmt.num1(weeklyDrinks)) drinks avoided/week")

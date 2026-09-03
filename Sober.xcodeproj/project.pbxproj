@@ -14,6 +14,7 @@
 		2127CDB7A3BA15FB0B227B4A /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657DCA7F592F08208CD733D9 /* Stats.swift */; };
 		21428A2BCE74296D048349F5 /* StatTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA88649F7148CE9817BCDB /* StatTile.swift */; };
 		255482A8B134FB2F85EF998C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD95196081EFAC95B4691DC /* Models.swift */; };
+		3C88E4324925DB1EABE9B07D /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A306CC71E244F4CED5801D /* Currencies.swift */; };
 		40E9CA710E9359017166C393 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32B33A512F0BC6A2746BA55 /* DateUtils.swift */; };
 		4736B9FBD548B3B12A5EABE1 /* MoodPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0548BE0C7ACA4FD12CED9 /* MoodPicker.swift */; };
 		48F391C1F31D9FDBA8030C99 /* InsightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D247FE184A44F70A706E1B7 /* InsightsTests.swift */; };
@@ -37,6 +38,7 @@
 		B31B772E2C07B918F878F722 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551C1DE53C6696BEB7D7C05 /* Money.swift */; };
 		BE6A415DAF213AB35C1B663E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8BCEEE16E4133908B99020 /* Assets.xcassets */; };
 		CA90C552859E0929117C7C50 /* SleepHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3720241BB7617BFB26D4979 /* SleepHealthView.swift */; };
+		D68F4A0DBB2C89768EE51F32 /* CurrencyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FED065EBC0A6F6091976E6 /* CurrencyPicker.swift */; };
 		DAD57E90D43A7577F7299ACC /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6BE98E86EFFC6CA309C4BB /* Store.swift */; };
 		E0FF53D1DE6153C17D03CCB1 /* StreaksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796DBC3654C5F723E1B5641 /* StreaksTests.swift */; };
 		E1553CDA091388BAFCC2265A /* Fmt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FC1704E32E2FC33B3CBA19 /* Fmt.swift */; };
@@ -69,6 +71,7 @@
 		6551C1DE53C6696BEB7D7C05 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		657DCA7F592F08208CD733D9 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		688CB35C3AE17774ECF4D2C7 /* MoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTests.swift; sourceTree = "<group>"; };
+		69FED065EBC0A6F6091976E6 /* CurrencyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPicker.swift; sourceTree = "<group>"; };
 		6A9CFA793848E26C63056056 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6D8C1C335BA956BE6FBEE075 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		720CE2507F155E65837B586F /* CheckInFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInFormView.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		BDD95196081EFAC95B4691DC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C192D2136D4833DBF65969AC /* Milestones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestones.swift; sourceTree = "<group>"; };
 		D3720241BB7617BFB26D4979 /* SleepHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepHealthView.swift; sourceTree = "<group>"; };
+		E0A306CC71E244F4CED5801D /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		E5D0277C1F1057B474837F2C /* Sober.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sober.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E796DBC3654C5F723E1B5641 /* StreaksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksTests.swift; sourceTree = "<group>"; };
 		EF31F6DC55D2CF29627664B7 /* WheelCountPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelCountPicker.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 		A8C0EE8006AE2032B8AF99ED /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				E0A306CC71E244F4CED5801D /* Currencies.swift */,
 				A32B33A512F0BC6A2746BA55 /* DateUtils.swift */,
 				82FC1704E32E2FC33B3CBA19 /* Fmt.swift */,
 				FD3C5ED9258CA30B684354FE /* Insights.swift */,
@@ -217,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				720CE2507F155E65837B586F /* CheckInFormView.swift */,
+				69FED065EBC0A6F6091976E6 /* CurrencyPicker.swift */,
 				EF7829282FE69D73C167F495 /* KeyboardUtils.swift */,
 				40D0548BE0C7ACA4FD12CED9 /* MoodPicker.swift */,
 				4CDA88649F7148CE9817BCDB /* StatTile.swift */,
@@ -401,6 +407,8 @@
 			files = (
 				AA128F78FB627698EB659432 /* CalendarScreenView.swift in Sources */,
 				B28F9270D5D188799E59D225 /* CheckInFormView.swift in Sources */,
+				3C88E4324925DB1EABE9B07D /* Currencies.swift in Sources */,
+				D68F4A0DBB2C89768EE51F32 /* CurrencyPicker.swift in Sources */,
 				40E9CA710E9359017166C393 /* DateUtils.swift in Sources */,
 				E1553CDA091388BAFCC2265A /* Fmt.swift in Sources */,
 				4C81C77F7C7F0245D604ABBB /* Insights.swift in Sources */,

@@ -10,6 +10,7 @@ struct OnboardingView: View {
     @State private var paidDrinksPerDay: Double = 2
     @State private var paidOutFrequencyPct: Double = 100
     @State private var avgSpendPerOuting: Double = 16
+    @State private var currencyCode = "USD"
     @State private var currencySymbol = "$"
 
     private var dailyRate: Double {
@@ -92,11 +93,8 @@ struct OnboardingView: View {
                 Stepper("% of those days you actually went: \(Int(paidOutFrequencyPct))%", value: $paidOutFrequencyPct, in: 0...100, step: 5)
                 Stepper("Avg spend on a night out: \(currencySymbol)\(Int(avgSpendPerOuting))", value: $avgSpendPerOuting, in: 0...500, step: 5)
 
-                Text("Currency symbol").font(.subheadline.bold())
-                TextField("$", text: $currencySymbol)
-                    .textFieldStyle(.roundedBorder)
-                    .frame(width: 80)
-                    .dismissKeyboardToolbar()
+                Text("Currency").font(.subheadline.bold())
+                CurrencyPicker(currencyCode: $currencyCode, currencySymbol: $currencySymbol)
 
                 navButtons(next: { step = 3 })
             }
@@ -118,7 +116,7 @@ struct OnboardingView: View {
                 )
                 store.completeOnboarding(
                     startDate: DateUtils.dateStr(from: startDate), moneyModel: mm,
-                    currencySymbol: currencySymbol.isEmpty ? "$" : currencySymbol
+                    currency: currencyCode, currencySymbol: currencySymbol
                 )
             }
             .buttonStyle(.borderedProminent)

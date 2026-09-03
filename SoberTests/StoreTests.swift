@@ -11,7 +11,7 @@ final class StoreTests: XCTestCase {
     func testStorePersistsToDiskAndReloadsIdentically() {
         let dir = tempDir()
         let store1 = Store(directory: dir)
-        store1.completeOnboarding(startDate: "2026-01-01", moneyModel: .default, currencySymbol: "$")
+        store1.completeOnboarding(startDate: "2026-01-01", moneyModel: .default, currency: "USD", currencySymbol: "$")
         var patch = CheckInPatch()
         patch.date = "2026-01-05"
         patch.mood = .set(4)
@@ -104,7 +104,7 @@ final class StoreTests: XCTestCase {
 
     func testRecordRelapseResetsStreakButKeepsHistory() {
         let store = Store(directory: tempDir())
-        store.completeOnboarding(startDate: "2026-01-01", moneyModel: .default, currencySymbol: "$")
+        store.completeOnboarding(startDate: "2026-01-01", moneyModel: .default, currency: "USD", currencySymbol: "$")
         store.recordRelapse(date: "2026-01-11")
         XCTAssertEqual(store.data.periods.count, 2)
         XCTAssertEqual(Streaks.numRelapses(store.data.periods), 1)

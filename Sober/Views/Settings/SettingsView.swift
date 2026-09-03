@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var store: Store
+    @State private var currencyCode = "USD"
     @State private var currencySymbol = "$"
     @State private var startDate = Date()
     @State private var freeDaysPerWeek: Double = 0
@@ -32,7 +33,7 @@ struct SettingsView: View {
                 Theme.bgApp.ignoresSafeArea()
                 Form {
                     Section("Money saved calculation") {
-                        TextField("Currency symbol", text: $currencySymbol)
+                        CurrencyPicker(currencyCode: $currencyCode, currencySymbol: $currencySymbol)
                         DatePicker("Current streak start date", selection: $startDate, in: ...Date(), displayedComponents: .date)
                         Text("Free-access days").font(.caption).foregroundStyle(Theme.textSecondary)
                         HStack(spacing: 12) {
@@ -100,6 +101,7 @@ struct SettingsView: View {
 
     private func load() {
         let s = store.data.settings
+        currencyCode = s.currency
         currencySymbol = s.currencySymbol
         weightUnit = s.weightUnit
         let mm = s.moneyModel
@@ -116,7 +118,8 @@ struct SettingsView: View {
 
     private func saveSettings() {
         var s = store.data.settings
-        s.currencySymbol = currencySymbol.isEmpty ? "$" : currencySymbol
+        s.currency = currencyCode
+        s.currencySymbol = currencySymbol
         s.weightUnit = weightUnit
         s.moneyModel = MoneyModel(
             freeDaysPerWeek: freeDaysPerWeek, freeDrinksPerDay: freeDrinksPerDay,

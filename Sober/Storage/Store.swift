@@ -70,8 +70,9 @@ final class Store: ObservableObject {
 
     // MARK: - Onboarding / settings
 
-    func completeOnboarding(startDate: String, moneyModel: MoneyModel, currencySymbol: String) {
+    func completeOnboarding(startDate: String, moneyModel: MoneyModel, currency: String, currencySymbol: String) {
         data.settings.moneyModel = moneyModel
+        data.settings.currency = currency
         data.settings.currencySymbol = currencySymbol
         data.periods = Streaks.startPeriod(data.periods, startDateStr: startDate)
         data.onboarded = true

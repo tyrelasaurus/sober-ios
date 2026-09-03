@@ -97,6 +97,7 @@ struct CheckInFormView: View {
             .foregroundStyle(Theme.textPrimary)
             .navigationTitle(date == DateUtils.todayStr() ? "Today's Check-In" : "Check-In")
             .navigationBarTitleDisplayMode(.inline)
+            .dismissKeyboardToolbar()
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) { Button("Save") { save() } }

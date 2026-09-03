@@ -138,6 +138,7 @@ struct WeighInFormView: View {
             .foregroundStyle(Theme.textPrimary)
             .navigationTitle(existing == nil ? "Log a Weigh-In" : "Edit Weigh-In")
             .navigationBarTitleDisplayMode(.inline)
+            .dismissKeyboardToolbar()
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) { Button("Save") { save() } }

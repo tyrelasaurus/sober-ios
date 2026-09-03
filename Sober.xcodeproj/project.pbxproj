@@ -20,6 +20,7 @@
 		4C81C77F7C7F0245D604ABBB /* Insights.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3C5ED9258CA30B684354FE /* Insights.swift */; };
 		6449F634CC1888EB6360E9F2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187D5C8F36DFED8E414A6C0 /* OnboardingView.swift */; };
 		70FF20A43A4416B067E5D08A /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F133EAFE43FA780CEB1B423 /* InsightsView.swift */; };
+		7197746E044F36893F277653 /* KeyboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7829282FE69D73C167F495 /* KeyboardUtils.swift */; };
 		7DEF1B6E56679F12835A4942 /* Milestones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C192D2136D4833DBF65969AC /* Milestones.swift */; };
 		8451C57D363797F2DC6F90C3 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688CB35C3AE17774ECF4D2C7 /* MoneyTests.swift */; };
 		869571BAEF640C2C76B3EF6D /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EC812685E644EBE453A4E /* WeightView.swift */; };
@@ -89,6 +90,7 @@
 		E5D0277C1F1057B474837F2C /* Sober.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sober.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E796DBC3654C5F723E1B5641 /* StreaksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksTests.swift; sourceTree = "<group>"; };
 		EF31F6DC55D2CF29627664B7 /* WheelCountPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelCountPicker.swift; sourceTree = "<group>"; };
+		EF7829282FE69D73C167F495 /* KeyboardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardUtils.swift; sourceTree = "<group>"; };
 		FD3C5ED9258CA30B684354FE /* Insights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insights.swift; sourceTree = "<group>"; };
 		FE4857DE09FCC62D3E7F67B6 /* Streaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streaks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				720CE2507F155E65837B586F /* CheckInFormView.swift */,
+				EF7829282FE69D73C167F495 /* KeyboardUtils.swift */,
 				40D0548BE0C7ACA4FD12CED9 /* MoodPicker.swift */,
 				4CDA88649F7148CE9817BCDB /* StatTile.swift */,
 				429E7C87E5B384EBF7C7BBB0 /* Theme.swift */,
@@ -403,6 +406,7 @@
 				4C81C77F7C7F0245D604ABBB /* Insights.swift in Sources */,
 				70FF20A43A4416B067E5D08A /* InsightsView.swift in Sources */,
 				08A45199817230A1148B2B75 /* JournalView.swift in Sources */,
+				7197746E044F36893F277653 /* KeyboardUtils.swift in Sources */,
 				7DEF1B6E56679F12835A4942 /* Milestones.swift in Sources */,
 				949E790A68E5B2B36566BCDD /* MilestonesView.swift in Sources */,
 				255482A8B134FB2F85EF998C /* Models.swift in Sources */,

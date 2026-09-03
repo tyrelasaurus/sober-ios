@@ -89,13 +89,14 @@ struct OnboardingView: View {
                     WheelCountPicker(title: "Drinks/day", range: 0...5, plusAtMax: true, selection: $paidDrinksPerDay)
                 }
                 .frame(height: 110)
-                numberField("% of those days you actually went", value: $paidOutFrequencyPct)
-                numberField("Avg spend on a night out", value: $avgSpendPerOuting)
+                Stepper("% of those days you actually went: \(Int(paidOutFrequencyPct))%", value: $paidOutFrequencyPct, in: 0...100, step: 5)
+                Stepper("Avg spend on a night out: \(currencySymbol)\(Int(avgSpendPerOuting))", value: $avgSpendPerOuting, in: 0...500, step: 5)
 
                 Text("Currency symbol").font(.subheadline.bold())
                 TextField("$", text: $currencySymbol)
                     .textFieldStyle(.roundedBorder)
                     .frame(width: 80)
+                    .dismissKeyboardToolbar()
 
                 navButtons(next: { step = 3 })
             }
@@ -121,18 +122,6 @@ struct OnboardingView: View {
                 )
             }
             .buttonStyle(.borderedProminent)
-        }
-    }
-
-    private func numberField(_ label: String, value: Binding<Double>) -> some View {
-        HStack {
-            Text(label).font(.caption).foregroundStyle(Theme.textSecondary)
-            Spacer()
-            TextField("0", value: value, format: .number)
-                .keyboardType(.decimalPad)
-                .multilineTextAlignment(.trailing)
-                .textFieldStyle(.roundedBorder)
-                .frame(width: 80)
         }
     }
 

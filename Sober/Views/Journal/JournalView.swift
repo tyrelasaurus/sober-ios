@@ -86,6 +86,7 @@ struct JournalEditorView: View {
             .foregroundStyle(Theme.textPrimary)
             .navigationTitle(entry == nil ? "New Entry" : "Edit Entry")
             .navigationBarTitleDisplayMode(.inline)
+            .dismissKeyboardToolbar()
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) { Button("Save") { save() } }
